@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.postful - send an artistic and thoughful postcard</title>
+
+    <!-- Link to Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <section class="wrapper mainWindow">
+        <div class="logoCol">
+            <div class="logo">
+                <h1>.postful</h1>
+                <div class="colPaletteContainer toolTip">
+                    <span class="toolTipText">Click for next colour palette.</span>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="juno">
+                <h2><a href="https://junocollege.com/" target="_blank">Created at Juno College</a></h2>
+            </div>
+        </div>
+
+        <div class="postcardContainer">
+            <div class="postcardFront postcardProps">
+                <img class="postcardIMG" src='./assets/byTheSeaPlaceholder.jpg'>
+            </div>
+
+            <div class="postcardRear postcardProps">
+
+                <form action="sendEmail.php" method="POST" class="myForm" name="myForm">
+                    <div class="formTop">
+                        <div class="emailsContainer">
+                            <label for="senderEmail">From:</label>
+                            <div class="senderContainer">
+                                <input type="email" id="senderEmail" name="senderEmail" placeholder="your email here"
+                                    required>
+                                <span>*</span>
+                            </div>
+
+                            <label for="recipientEmail">To:</label>
+                            <div class="recipientContainer"> <input type="email" id="recipientEmail"
+                                    name="recipientEmail" placeholder="recipient email" required>
+                                <span>*</span>
+                            </div>
+
+                        </div>
+                        <div class="stampContainer">
+                            <div class="dateStamp">Port of France, Jan 22, 2021</div>
+                            <button type="submit" class="stampHere">
+                                <div class>Stamp & send</div><img src="./assets/duckHuntersStamp.png">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="formBottom">
+                        <label for="message" class="sr-only">Enter your message here</label>
+                        <textarea name="senderMessage" id="message" maxlength="585"></textarea>
+                        <p>Artwork title goes here</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Load Javascript and JQuery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
